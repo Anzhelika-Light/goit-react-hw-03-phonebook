@@ -29,10 +29,12 @@
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
 }
 
-.contactsList__btn:hover {
+.contactsList__btn:hover,
+.contactsList__btn:focus {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #8e170e 0 -3px 0 inset;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .contactsList__icon {
