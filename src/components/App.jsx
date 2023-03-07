@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Form from './ContactForm/ContactForm';
-import Contacts from './Contacts/Contacts';
+import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import { nanoid } from 'nanoid';
 import css from './App.module.css';
@@ -52,7 +52,7 @@ class App extends Component {
         <Form onSubmit={this.formSubmitHandler} />
         <h2 className={css.subtitle}>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
-        <Contacts
+        <ContactList
           contacts={visibleContacts}
           onDeleteContact={this.deleteContact}
         />

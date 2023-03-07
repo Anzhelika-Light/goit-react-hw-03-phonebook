@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { FaTrashAlt } from 'react-icons/fa';
-import css from './Contacts.module.css';
+import css from './ContactList.module.css';
 
-class Contacts extends Component {
+class ContactList extends Component {
+  static propTypes = {
+    contacts: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    onDelete: PropTypes.func.isRequired,
+  };
   render() {
     return (
       <ul className={css.contactsList}>
@@ -25,4 +36,4 @@ class Contacts extends Component {
   }
 }
 
-export default Contacts;
+export default ContactList;
