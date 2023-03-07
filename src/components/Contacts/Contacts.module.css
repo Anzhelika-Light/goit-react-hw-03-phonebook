@@ -1,0 +1,41 @@
+.contactsList {
+  margin-left: 50px;
+}
+
+.contactsList__item {
+  margin: 10px;
+}
+
+.contactsList__name {
+  font-weight: 700;
+  color: rgb(27, 23, 23);
+}
+
+.contactsList__number {
+  margin-right: 15px;
+  color: rgb(27, 23, 23);
+}
+
+.contactsList__btn {
+  padding: 4px 10px 4px;
+  font-weight: 600;
+  background-color: red;
+  color: beige;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+}
+
+.contactsList__btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #8e170e 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.contactsList__icon {
+  display: inline-block;
+  margin-left: 6px;
+}

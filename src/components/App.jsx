@@ -17,9 +17,16 @@ class App extends Component {
 
   formSubmitHandler = ({ name, number }) => {
     const newContact = { name, number, id: nanoid() };
+    this.state.contacts.map(contact => contact.name).includes(newContact.name)
+      ? alert(`${name} is already in contacts`)
+      : this.setState(({ contacts }) => ({
+          contacts: [newContact, ...contacts],
+        }));
+  };
 
-    this.setState(({ contacts }) => ({
-      contacts: [newContact, ...contacts],
+  deleteContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
   };
 
@@ -39,12 +46,15 @@ class App extends Component {
     const { contacts, filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
     return (
-      <div>
+      <div style={{ padding: '20px' }}>
         <h1>Phonebook</h1>
         <Form onSubmit={this.formSubmitHandler} />
         <h2>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
-        <Contacts contacts={visibleContacts} />
+        <Contacts
+          contacts={visibleContacts}
+          onDeleteContact={this.deleteContact}
+        />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaUserPlus } from 'react-icons/fa';
 import css from './ContactForm.module.css';
 
 class Form extends Component {
@@ -49,7 +50,10 @@ class Form extends Component {
             onChange={this.handleInputChange}
           />
         </label>
-        <button type="submit">Add contact</button>
+        <button type="submit">
+          <FaUserPlus />
+          Add contact
+        </button>
       </form>
     );
   }
