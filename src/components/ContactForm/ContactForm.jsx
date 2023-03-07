@@ -25,10 +25,11 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <form className={css.form} onSubmit={this.handleSubmit}>
+        <label className={css.form__label}>
           Name
           <input
+            className={css.form__input}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -38,9 +39,10 @@ class Form extends Component {
             onChange={this.handleInputChange}
           />
         </label>
-        <label>
+        <label className={css.form__label}>
           Number
           <input
+            className={css.form__input}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -50,8 +52,8 @@ class Form extends Component {
             onChange={this.handleInputChange}
           />
         </label>
-        <button type="submit">
-          <FaUserPlus />
+        <button type="submit" className={css.form__btn}>
+          <FaUserPlus className={css.form__icon} />
           Add contact
         </button>
       </form>

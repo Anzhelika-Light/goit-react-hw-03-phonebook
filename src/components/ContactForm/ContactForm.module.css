@@ -1,0 +1,60 @@
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  text-align: center;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form__label:hover,
+.form__label:focus {
+  font-weight: 600;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
+.form__input:hover {
+  border: 2px solid rgb(41, 36, 36);
+}
+
+.form__input:focus {
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(36, 31, 36, 1);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(36, 31, 36, 1);
+  box-shadow: 10px 10px 18px 0px rgba(36, 31, 36, 1);
+}
+
+.form__btn {
+  margin-top: 20px;
+  padding: 8px 35px 8px;
+  font-weight: 600;
+  background-color: rgb(89, 46, 242);
+  color: beige;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1d0e8e 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.form__icon {
+  margin-right: 10px;
+}

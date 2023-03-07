@@ -1,0 +1,15 @@
+.title {
+  margin-bottom: 25px;
+  border-radius: 4px;
+  color: rgb(50, 50, 70);
+  -webkit-box-shadow: 9px 13px 30px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 13px 30px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 13px 30px -1px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  margin-left: 60px;
+  color: rgb(50, 50, 70);
+}
