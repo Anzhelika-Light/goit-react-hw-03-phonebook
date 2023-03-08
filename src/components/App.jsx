@@ -18,7 +18,9 @@ class App extends Component {
 
   formSubmitHandler = ({ name, number }) => {
     const newContact = { name, number, id: nanoid() };
-    this.state.contacts.map(contact => contact.name).includes(newContact.name)
+    this.state.contacts.find(
+      contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
+    )
       ? alert(`${name} is already in contacts`)
       : this.setState(({ contacts }) => ({
           contacts: [newContact, ...contacts],
